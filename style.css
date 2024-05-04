@@ -1,0 +1,112 @@
+/* Importing fonts for design. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/* declaring color to variables */
+:root{
+    /* Primary */
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-saturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    /* Neutral */
+    --slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+}
+    
+/* Resetting default margin and padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--very-dark-blue);
+    color: white;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+}
+.sub-wrapper{
+    border-radius: .5rem 0 0 .5rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    background-color: var(--dark-saturated-blue);
+}
+.achievement-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+.achievement-wrapper > span > .faded-text{
+    font-size: 14px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+
+.overlay{
+    border-radius: 0 0.5rem 0.5rem 0;
+    opacity: 0.8;
+    width: 100%;
+    background-color:  hsl(277, 64%, 61%);
+    background-image: url('./images/image-header-desktop.jpg');
+    background-blend-mode: multiply;
+}
+.office-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+.upper-para{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+.faded-text{
+    font-size: 16px;
+    color: var(--slightly-transparent-white-stats);
+}
+.soft-violet{
+    color: var(--soft-violet);
+}
+@media screen and (max-width: 768px) {
+    .wrapper{
+        align-items: center;
+        flex-direction: column-reverse;
+        flex: 1 0;
+        width: 90%;
+        text-align: center;
+        margin-top: 100px;
+        transform: scale(0.7);
+    }
+    .sub-wrapper{
+        width: 100%;
+        align-self: center;
+    }
+    .achievement-wrapper{
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    .overlay{
+        padding: 0;
+        width: 100%;
+        height: 40%;
+        background-repeat: repeat;
+    }
+
+    
+}
